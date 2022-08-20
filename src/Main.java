@@ -36,7 +36,8 @@ public class Main {
 
     // task 2
     public static void printEvenNumbersSorted(List<Integer> numbers) {
-        List<Integer> array = new ArrayList<>(numbers); // введен новый массив, чтобы не изменять первоначальный
+        Set<Integer> set = new HashSet<>(numbers);
+        List<Integer> array = new ArrayList<>(set);
         array.sort(Comparator.naturalOrder());
         boolean isRequiredComma = false;
         for (Integer number : array) {
